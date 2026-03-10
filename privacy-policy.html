@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Timer Police</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #f5f3ef;
+      --card: #ffffff;
+      --primary: #2d6a4f;
+      --accent: #52b788;
+      --soft: #d8f3dc;
+      --text: #1b2d25;
+      --muted: #6b8f71;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 0 0 60px 0;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #52b788 100%);
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+      top: -100px; right: -80px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      bottom: -60px; left: -40px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #d8f3dc;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .hero .emoji-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 14px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .wave {
+      display: block;
+      width: 100%;
+      height: 50px;
+      background: var(--bg);
+      clip-path: ellipse(55% 100% at 50% 100%);
+      margin-top: -2px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .intro-box {
+      background: var(--soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: -20px auto 36px;
+      font-size: 1rem;
+      color: var(--primary);
+      font-weight: 600;
+      line-height: 1.8;
+    }
+    .section {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 28px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 16px rgba(45,106,79,0.07);
+      border: 1px solid #e8f5e9;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+    .section:nth-child(1)  { animation-delay: 0.05s; }
+    .section:nth-child(2)  { animation-delay: 0.10s; }
+    .section:nth-child(3)  { animation-delay: 0.15s; }
+    .section:nth-child(4)  { animation-delay: 0.20s; }
+    .section:nth-child(5)  { animation-delay: 0.25s; }
+    .section:nth-child(6)  { animation-delay: 0.30s; }
+    .section:nth-child(7)  { animation-delay: 0.35s; }
+    .section:nth-child(8)  { animation-delay: 0.40s; }
+    .section:nth-child(9)  { animation-delay: 0.45s; }
+    .section:nth-child(10) { animation-delay: 0.50s; }
+    .section:nth-child(11) { animation-delay: 0.55s; }
+    .section:nth-child(12) { animation-delay: 0.60s; }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .section-icon {
+      width: 44px; height: 44px;
+      background: var(--soft);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .section p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: #3a5244;
+      margin-bottom: 10px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+    .section ul li {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: #3a5244;
+      padding: 6px 0 6px 26px;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .pill {
+      display: inline-block;
+      background: var(--soft);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin: 3px 2px;
+    }
+    .promise-box {
+      background: #e8f5e9;
+      border: 1.5px solid #a5d6a7;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 14px;
+      font-weight: 700;
+      color: #2d6a4f;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .promise-box::before { content: '🛡️ '; }
+    .warning-box {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      font-weight: 700;
+      color: #795548;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .warning-box::before { content: '🔒 '; }
+    .contact-card {
+      background: linear-gradient(135deg, #2d6a4f, #1b4332);
+      border-radius: 18px;
+      padding: 36px 30px;
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+    }
+    .contact-card h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .contact-card p {
+      color: #b7e4c7;
+      font-size: 0.97rem;
+      margin-bottom: 22px;
+      line-height: 1.7;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 13px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .contact-card a:hover {
+      background: #40916c;
+      transform: scale(1.04);
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer .last-updated {
+      font-size: 0.68rem;
+      color: #b0c8b8;
+      margin-top: 5px;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <span class="emoji-icon">🚔⏱️</span>
+    <div class="badge">Privacy Policy</div>
+    <h1>Timer Police</h1>
+  </div>
+  <div class="wave"></div>
+
+  <div class="container">
+
+    <div class="intro-box">
+      👋 Hi there! We wrote this privacy policy to be honest and easy to understand — no confusing legal language, no hidden surprises. Timer Police is built around trust, and this page reflects that. If you ever have a question, just email us.
+    </div>
+
+    <!-- 1 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🌿</div>
+        <h2>So, what is Timer Police?</h2>
+      </div>
+      <p>Timer Police is a digital wellbeing app for Android that helps you be more intentional about how you use your phone. You choose which apps to limit, set a time budget, and Timer Police gently steps in when that time is up — giving you a moment to pause and decide.</p>
+      <p>It's not about taking control away from you. It's about giving it back.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <h2>What information does the app use?</h2>
+      </div>
+      <p>To do its job, Timer Police works with a small set of information:</p>
+      <ul>
+        <li>Your <strong>email address</strong> — only when you choose to sign in</li>
+        <li>The <strong>app names</strong> you personally select to control — nothing else</li>
+        <li><strong>Session records</strong> — simple timestamps of when a session started and how it ended (kept promise, extended, or ignored)</li>
+        <li><strong>Foreground app activity</strong> — only for the apps you've selected, so we know when to show a timer</li>
+      </ul>
+      <div class="promise-box">We never peek at apps you haven't chosen. Your other app usage is completely invisible to us.</div>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🎯</div>
+        <h2>Why do we use this information?</h2>
+      </div>
+      <p>Every piece of data we use has one clear purpose — making the app work for you:</p>
+      <ul>
+        <li>Your email lets you sign in and keeps your settings safe</li>
+        <li>App names tell us which apps to watch for you</li>
+        <li>Session records help you see your own progress over time</li>
+        <li>Foreground activity lets us show your timer at the right moment</li>
+      </ul>
+      <p>That's it. We don't analyse trends, build profiles, or use your data to show you ads.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📡</div>
+        <h2>What leaves your device?</h2>
+      </div>
+      <p>Almost everything stays right on your phone — your selected apps, session records, and usage history are all stored locally on your device and never leave it.</p>
+      <p>The only thing that goes to the cloud is your <strong>account information</strong> (email and sign-in details), which is handled by Firebase Authentication when you choose to sign in. If you use the app without an account, absolutely nothing leaves your device.</p>
+      <div class="warning-box">We never transmit your accessibility data off your device. It is used locally only, to display timers and prompts.</div>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">♿</div>
+        <h2>About the Accessibility Service</h2>
+      </div>
+      <p>Timer Police uses Android's Accessibility Service for one specific reason — to detect when you open an app you've chosen to manage, so it can show your timer or a gentle interruption screen.</p>
+      <p>This is the only way Android allows an app to do this reliably. We use it carefully and responsibly.</p>
+      <div class="promise-box">Timer Police does not use Accessibility Service data for any purpose unrelated to the core app functionality described above. It is never used for advertising, tracking, profiling, or shared with any third party.</div>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔗</div>
+        <h2>Third-party services we rely on</h2>
+      </div>
+      <p>We use a small number of trusted services to keep Timer Police running smoothly:</p>
+      <ul>
+        <li><span class="pill">Firebase Authentication</span> <span class="pill">Google Sign-In</span> — for safe, secure login</li>
+        <li><span class="pill">Google Play Billing</span> — for handling subscription payments</li>
+      </ul>
+      <p style="margin-top:12px;">These are reputable, industry-standard services. Your payment details go directly through Google Play — Timer Police never sees, touches, or stores your payment information at any point.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🤝</div>
+        <h2>Do you sell or share our data?</h2>
+      </div>
+      <p>No — and we want to be very direct about this:</p>
+      <ul>
+        <li>We <strong>do not sell</strong> your personal data to anyone, ever</li>
+        <li>We <strong>do not share</strong> your accessibility data with any third party</li>
+        <li>We only share data with the services that are essential to run the app (like Firebase for authentication)</li>
+      </ul>
+      <div class="promise-box">Your data belongs to you. We are simply trusted to look after it while you use the app.</div>
+    </div>
+
+    <!-- 8 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🗂️</div>
+        <h2>How long do we keep your data?</h2>
+      </div>
+      <p>We keep your data only as long as it's useful to you:</p>
+      <ul>
+        <li>All app-control settings and session records are stored <strong>on your device</strong> and disappear when you clear the app or uninstall it</li>
+        <li>If you're signed in, your account information stays in Firebase until you choose to <strong>delete your account</strong></li>
+      </ul>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🎛️</div>
+        <h2>You are always in control</h2>
+      </div>
+      <p>We want you to feel completely in charge of your own experience:</p>
+      <ul>
+        <li>You can <strong>disable the Accessibility Service</strong> at any time in your Android Settings</li>
+        <li>You can <strong>uninstall the app</strong> at any time — no penalties, no retention</li>
+        <li>You can <strong>request account deletion</strong> directly inside the app if you signed in</li>
+      </ul>
+    </div>
+
+    <!-- 10 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">👶</div>
+        <h2>Children's privacy</h2>
+      </div>
+      <p>Timer Police is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe your child has provided us with personal data, please contact us and we will delete it promptly.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🛡️</div>
+        <h2>How we protect your data</h2>
+      </div>
+      <p>We take security seriously. Timer Police uses encrypted storage for sensitive account and session information, and relies on Android's built-in platform security controls for all other app data. We do everything reasonable to keep your information safe.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <h2>Updates to this policy</h2>
+      </div>
+      <p>We may occasionally update this privacy policy as the app grows or as rules change. When we do, we'll update the date at the bottom of this page. If the changes are significant, we'll let you know through the app.</p>
+      <p>Continuing to use Timer Police after an update means you're comfortable with the changes. If you're ever unsure, feel free to reach out and ask us directly.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>💬 Questions? We're here.</h2>
+      <p>Privacy can feel complicated — but talking to us doesn't have to be. If anything on this page is unclear, or if you'd like to make a request about your data, just send us an email. We're real people and we'll reply.</p>
+      <a href="/cdn-cgi/l/email-protection#d8acb1b5bdaaa8b7b4b1bbbd98bfb5b9b1b4f6bbb7b5"><span class="__cf_email__" data-cfemail="add9c4c0c8dfddc2c1c4cec8edcac0ccc4c183cec2c0">[email&#160;protected]</span></a>
+    </div>
+
+    <footer>
+      <p>© 2026 Time

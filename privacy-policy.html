@@ -288,10 +288,11 @@
       </div>
       <p>To do its job, Timer Police works with a small set of information:</p>
       <ul>
-        <li>Your <strong>email address</strong> — only when you choose to sign in</li>
+        <li>The <strong>list of installed apps</strong> (app names/package names) so you can choose what to protect</li>
         <li>The <strong>app names</strong> you personally select to control — nothing else</li>
         <li><strong>Session records</strong> — simple timestamps of when a session started and how it ended (kept promise, extended, or ignored)</li>
         <li><strong>Foreground app activity</strong> — only for the apps you've selected, so we know when to show a timer</li>
+        <li><strong>Purchase verification data</strong> — a purchase token and product ID when you buy Pro</li>
       </ul>
       <div class="promise-box">We never peek at apps you haven't chosen. Your other app usage is completely invisible to us.</div>
     </div>
@@ -304,10 +305,11 @@
       </div>
       <p>Every piece of data we use has one clear purpose — making the app work for you:</p>
       <ul>
-        <li>Your email lets you sign in and keeps your settings safe</li>
+        <li>The installed apps list lets you pick what to protect</li>
         <li>App names tell us which apps to watch for you</li>
         <li>Session records help you see your own progress over time</li>
         <li>Foreground activity lets us show your timer at the right moment</li>
+        <li>Purchase verification lets us unlock Pro for lifetime access</li>
       </ul>
       <p>That's it. We don't analyse trends, build profiles, or use your data to show you ads.</p>
     </div>
@@ -319,7 +321,8 @@
         <h2>What leaves your device?</h2>
       </div>
       <p>Almost everything stays right on your phone — your selected apps, session records, and usage history are all stored locally on your device and never leave it.</p>
-      <p>The only thing that goes to the cloud is your <strong>account information</strong> (email and sign-in details), which is handled by Firebase Authentication when you choose to sign in. If you use the app without an account, absolutely nothing leaves your device.</p>
+      <p>The installed apps list is processed locally on your device and is not shared.</p>
+      <p>The only data that may leave your device is purchase verification data (purchase token and product ID) when you buy Pro, which is sent to our verification service and Google Play. Payment details are handled entirely by Google Play.</p>
       <div class="warning-box">We never transmit your accessibility data off your device. It is used locally only, to display timers and prompts.</div>
     </div>
 
@@ -342,8 +345,8 @@
       </div>
       <p>We use a small number of trusted services to keep Timer Police running smoothly:</p>
       <ul>
-        <li><span class="pill">Firebase Authentication</span> <span class="pill">Google Sign-In</span> — for safe, secure login</li>
-        <li><span class="pill">Google Play Billing</span> — for handling subscription payments</li>
+        <li><span class="pill">Google Play Billing</span> — for one-time purchases</li>
+        <li><span class="pill">Firebase Cloud Functions</span> — for purchase verification</li>
       </ul>
       <p style="margin-top:12px;">These are reputable, industry-standard services. Your payment details go directly through Google Play — Timer Police never sees, touches, or stores your payment information at any point.</p>
     </div>
@@ -358,7 +361,8 @@
       <ul>
         <li>We <strong>do not sell</strong> your personal data to anyone, ever</li>
         <li>We <strong>do not share</strong> your accessibility data with any third party</li>
-        <li>We only share data with the services that are essential to run the app (like Firebase for authentication)</li>
+        <li>We do not share your installed apps list with anyone</li>
+        <li>We only share data with the services that are essential to run the app (like purchase verification)</li>
       </ul>
       <div class="promise-box">Your data belongs to you. We are simply trusted to look after it while you use the app.</div>
     </div>
@@ -372,7 +376,7 @@
       <p>We keep your data only as long as it's useful to you:</p>
       <ul>
         <li>All app-control settings and session records are stored <strong>on your device</strong> and disappear when you clear the app or uninstall it</li>
-        <li>If you're signed in, your account information stays in Firebase until you choose to <strong>delete your account</strong></li>
+        <li>Pro access status is stored locally and can be restored through Google Play</li>
       </ul>
     </div>
 
@@ -386,7 +390,7 @@
       <ul>
         <li>You can <strong>disable the Accessibility Service</strong> at any time in your Android Settings</li>
         <li>You can <strong>uninstall the app</strong> at any time — no penalties, no retention</li>
-        <li>You can <strong>request account deletion</strong> directly inside the app if you signed in</li>
+        <li>You can <strong>manage purchases</strong> through Google Play</li>
       </ul>
     </div>
 
@@ -405,7 +409,7 @@
         <div class="section-icon">🛡️</div>
         <h2>How we protect your data</h2>
       </div>
-      <p>We take security seriously. Timer Police uses encrypted storage for sensitive account and session information, and relies on Android's built-in platform security controls for all other app data. We do everything reasonable to keep your information safe.</p>
+      <p>We take security seriously. Timer Police uses encrypted storage for sensitive app data, and relies on Android's built-in platform security controls for all other app data. We do everything reasonable to keep your information safe.</p>
     </div>
 
     <!-- 12 -->
@@ -422,12 +426,12 @@
     <div class="contact-card">
       <h2>💬 Questions? We're here.</h2>
       <p>Privacy can feel complicated — but talking to us doesn't have to be. If anything on this page is unclear, or if you'd like to make a request about your data, just send us an email. We're real people and we'll reply.</p>
-      <a href="#" onclick="window.location.href='mai'+'lto:'+'timerpolice'+'@'+'gmail.com'; return false;">timerpolice&#64;gmail&#46;com</a>
+      <a href="mailto:timerpolice@gmail.com">timerpolice@gmail.com</a>
     </div>
 
     <footer>
       <p>© 2026 Timer Police · All rights reserved</p>
-      <p class="last-updated">Last updated: March 10, 2026</p>
+      <p class="last-updated">Last updated: March 17, 2026</p>
     </footer>
 
   </div>

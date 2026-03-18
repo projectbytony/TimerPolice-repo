@@ -277,7 +277,7 @@
         <div class="section-icon">🌿</div>
         <h2>So, what is Timer Police?</h2>
       </div>
-      <p>Timer Police is a digital wellbeing app for Android that helps you be more intentional about how you use your phone. You choose which apps to protect, set a time limit, and Timer Police gently steps in when that time is up — giving you a moment to pause and decide.</p>
+      <p>Timer Police is a digital wellbeing app for Android that helps you be more intentional about how you use your phone. You choose which apps to limit, set a time budget, and Timer Police gently steps in when that time is up — giving you a moment to pause and decide.</p>
       <p>It's not about taking control away from you. It's about giving it back.</p>
     </div>
 
@@ -293,7 +293,7 @@
         <li>The <strong>app names</strong> you personally select to control — nothing else</li>
         <li><strong>Session records</strong> — simple timestamps of when a session started and how it ended (kept promise, extended, or ignored)</li>
         <li><strong>Foreground app activity</strong> — only for the apps you've selected, so we know when to show a timer</li>
-        <li><strong>Purchase verification data</strong> — a purchase token and product ID when you buy Pro</li>
+        <li><strong>Purchase metadata</strong> - a purchase token and product ID when you buy Pro, processed locally</li>
       </ul>
       <div class="promise-box">We never peek at apps you haven't chosen. Your other app usage is completely invisible to us.</div>
     </div>
@@ -310,7 +310,7 @@
         <li>App names tell us which apps to watch for you</li>
         <li>Session records help you see your own progress over time</li>
         <li>Foreground activity lets us show your timer at the right moment</li>
-        <li>Purchase verification lets us unlock Pro for lifetime access</li>
+        <li>Local purchase checks let us unlock Pro for lifetime access</li>
       </ul>
       <p>That's it. We don't analyse trends, build profiles, or use your data to show you ads.</p>
     </div>
@@ -323,7 +323,7 @@
       </div>
       <p>Almost everything stays right on your phone — your selected apps, session records, and usage history are all stored locally on your device and never leave it.</p>
       <p>The installed apps list is processed locally on your device and is not shared.</p>
-      <p>The only data that may leave your device is purchase verification data (purchase token and product ID) when you buy Pro, which is sent to our verification service and Google Play. Payment details are handled entirely by Google Play.</p>
+      <p>The only data that may leave your device is handled by Google Play when you buy Pro. Timer Police does not run its own servers for purchases. Payment details are handled entirely by Google Play.</p>
       <div class="warning-box">We never transmit your accessibility data off your device. It is used locally only, to display timers and prompts.</div>
     </div>
 
@@ -347,8 +347,7 @@
       <p>We use a small number of trusted services to keep Timer Police running smoothly:</p>
       <ul>
         <li><span class="pill">Google Play Billing</span> — for one-time purchases</li>
-        <li><span class="pill">Firebase Cloud Functions</span> — for purchase verification</li>
-      </ul>
+              </ul>
       <p style="margin-top:12px;">These are reputable, industry-standard services. Your payment details go directly through Google Play — Timer Police never sees, touches, or stores your payment information at any point.</p>
     </div>
 
@@ -363,7 +362,7 @@
         <li>We <strong>do not sell</strong> your personal data to anyone, ever</li>
         <li>We <strong>do not share</strong> your accessibility data with any third party</li>
         <li>We do not share your installed apps list with anyone</li>
-        <li>We only share data with the services that are essential to run the app (like purchase verification)</li>
+        <li>We only share data with the services that are essential to run the app (like Google Play Billing)</li>
       </ul>
       <div class="promise-box">Your data belongs to you. We are simply trusted to look after it while you use the app.</div>
     </div>
@@ -433,9 +432,10 @@
 
     <footer>
       <p>© 2026 Timer Police · All rights reserved</p>
-      <p class="last-updated">Last updated: March 17, 2026</p>
+      <p class="last-updated">Last updated: March 18, 2026</p>
     </footer>
 
   </div>
 </body>
 </html>
+
